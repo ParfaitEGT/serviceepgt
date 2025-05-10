@@ -1,0 +1,12 @@
+[
+    {
+        "nom": "Jean Dupont",
+        "message": "Excellent site, facile à utiliser !",
+        "date": "2025-05-10"
+    },
+    {
+        "nom": "Sophie Martin",
+        "message": "Une belle interface et un bon CMS.",
+        "date": "2025-05-09"
+    }
+]

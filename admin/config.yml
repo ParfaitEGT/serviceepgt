@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Articles de blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "avis"
+    label: "Avis des utilisateurs"
+    folder: "content/"
+    file: "avis.json"
+    create: true
+    fields:
+      - { label: "Nom", name: "nom", widget: "string" }
+      - { label: "Message", name: "message", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  - name: "actualites"
+    label: "Actualités"
+    folder: "content/"
+    file: "actualites.json"
+    create: true
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Contenu", name: "contenu", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  - name: "a-propos"
+    label: "À propos"
+    folder: "content/"
+    file: "a-propos.json"
+    create: true
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
