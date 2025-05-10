@@ -5,7 +5,7 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-locale: 'fr'
+locale: "fr"
 
 collections:
   - name: "articles"
@@ -17,13 +17,3 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-
-  - name: "temoignages"
-    label: "Témoignages"
-    folder: "contenu/temoignages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nom", name: "nom", widget: "string" }
-      - { label: "Avis", name: "avis", widget: "text" }
-      - { label: "Date", name: "date", widget: "datetime" }
