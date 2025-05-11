@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "npm run build",
+    "start": "wrangler pages dev"
+  }
+}
