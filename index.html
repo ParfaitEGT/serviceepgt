@@ -9,7 +9,35 @@
 <body>
     <h1>Bienvenue sur mon site dynamique !</h1>
     <p>Ce contenu peut être édité via Netlify CMS.</p>
-
+<div id="avis-liste">
+    <h2>Avis des utilisateurs</h2>
+</div>
     <script src="script.js"></script>
+	<script>
+  fetch('content/avis.json')
+    .then(response => response.json())
+    .then(data => {
+      const avisContainer = document.getElementById("avis-liste");
+      data.forEach(avis => {
+        const avisElement = document.createElement("div");
+        avisElement.innerHTML = `<p><strong>${avis.nom} :</strong> ${avis.message} (${avis.date})</p>`;
+        avisContainer.appendChild(avisElement);
+      });
+    })
+    .catch(error => console.error("Erreur lors du chargement des avis :", error));
+</script>
+<script>
+  fetch('content/actualites.json')
+    .then(response => response.json())
+    .then(data => {
+      const actuContainer = document.getElementById("actu-liste");
+      data.forEach(actu => {
+        const actuElement = document.createElement("div");
+        actuElement.innerHTML = `<h3>${actu.titre}</h3><p>${actu.contenu} (${actu.date})</p>`;
+        actuContainer.appendChild(actuElement);
+      });
+    })
+    .catch(error => console.error("Erreur lors du chargement des actualités :", error));
+</script>
 </body>
 </html>
