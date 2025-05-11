@@ -2,11 +2,13 @@
     {
         "titre": "Nouvelle mise à jour du site !",
         "contenu": "Nous avons ajouté des fonctionnalités dynamiques grâce à Netlify CMS.",
-        "date": "2025-05-10"
+        "date": "2025-05-10",
+        "image": "/static/images/maj-site.jpg"
     },
     {
         "titre": "Maintenance prévue",
         "contenu": "Le site sera temporairement indisponible le 15 mai pour des améliorations.",
-        "date": "2025-05-09"
+        "date": "2025-05-09",
+        "image": "/static/images/maintenance.jpg"
     }
 ]
