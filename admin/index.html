@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netlify CMS</title>
-    <script src="https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js"></script>
 </head>
 <body>
+    <!-- Conteneur du CMS -->
     <div id="cms-root"></div>
+
+    <!-- Import de Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js"></script>
-	<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+
+    <!-- Vérification et gestion de Netlify Identity -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const cmsRoot = document.getElementById("cms-root");
+
+          if (!cmsRoot) {
+              console.error("Erreur : Élément #cms-root introuvable !");
+              return;
+          }
+
+          if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", (user) => {
+                  if (!user) {
+                      window.netlifyIdentity.on("login", () => {
+                          document.location.href = "/admin/";
+                      });
+                  }
+              });
+          }
+      });
+    </script>
 </body>
 </html>
