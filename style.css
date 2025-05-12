@@ -26,7 +26,7 @@ h2 {
 }
 
 /* 🗂️ Conteneurs */
-#avis-liste, #actu-liste {
+#avis-liste, #actu-liste, #produits {
     max-width: 600px;
     margin: 20px auto;
     padding: 15px;
@@ -35,13 +35,33 @@ h2 {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 📢 Avis & Actualités */
-#avis-liste div, #actu-liste div {
+/* 📢 Avis, Actualités & Produits */
+#avis-liste div, #actu-liste div, .produit {
     padding: 10px;
     margin: 10px 0;
     background: #f9f9f9;
     border-radius: 5px;
     border-left: 4px solid #007bff;
+}
+
+/* 🎭 Produits */
+.produit h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.produit a {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.produit a:hover {
+    background: #0056b3;
 }
 
 /* ✏️ Formulaire de contact */
@@ -101,7 +121,7 @@ button:hover {
         font-size: 2rem;
     }
 
-    #avis-liste, #actu-liste {
+    #avis-liste, #actu-liste, #produits {
         max-width: 100%;
     }
 
