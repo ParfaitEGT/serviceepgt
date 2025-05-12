@@ -1,0 +1,26 @@
+name: Déploiement Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Cloner le repository
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Installer Node.js et Wrangler
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - run: npm install -g wrangler
+      
+      - name: 🔄 Déploiement sur Cloudflare Pages
+        run: |
+          wrangler pages deploy . --project-name=serviceepgt --account-id=c9b48fbf671f3e5c0be12b910c3e573a
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
