@@ -1,5 +1,0 @@
-account_id = "TON_ACCOUNT_ID"
-project_name = "serviceepgt"
-routes = [
-  { pattern = "/api/*", worker = "backend-api" }
-]
