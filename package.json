@@ -1,6 +1,14 @@
 {
+  "name": "serviceepgt",
+  "version": "1.0.0",
+  "description": "Site dynamique propulsé par Cloudflare Pages & Workers",
   "scripts": {
-    "build": "npm run build",
-    "start": "wrangler pages dev"
-  }
+    "dev": "wrangler dev",
+    "build": "wrangler publish"
+  },
+  "dependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "author": "Parfait Esaie Ghassi Tankou",
+  "email": "parfaitesaie@gmail.com"
 }

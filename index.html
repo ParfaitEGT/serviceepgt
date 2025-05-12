@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Dynamique</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ServiceEPGT - Site Dynamique</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1>Bienvenue sur mon site dynamique !</h1>
-    <p>Ce contenu peut être édité via Netlify CMS.</p>
-<div id="avis-liste">
-    <h2>Avis des utilisateurs</h2>
-</div>
-    <script src="script.js"></script>
-	<script>
-  fetch('content/avis.json')
-    .then(response => response.json())
-    .then(data => {
-      const avisContainer = document.getElementById("avis-liste");
-      data.forEach(avis => {
-        const avisElement = document.createElement("div");
-        avisElement.innerHTML = `<p><strong>${avis.nom} :</strong> ${avis.message} (${avis.date})</p>`;
-        avisContainer.appendChild(avisElement);
-      });
-    })
-    .catch(error => console.error("Erreur lors du chargement des avis :", error));
-</script>
-<script>
-  fetch('content/actualites.json')
-    .then(response => response.json())
-    .then(data => {
-      const actuContainer = document.getElementById("actu-liste");
-      data.forEach(actu => {
-        const actuElement = document.createElement("div");
-        actuElement.innerHTML = `<h3>${actu.titre}</h3><p>${actu.contenu} (${actu.date})</p>`;
-        actuContainer.appendChild(actuElement);
-      });
-    })
-    .catch(error => console.error("Erreur lors du chargement des actualités :", error));
-</script>
-<div id="actu-liste">
-    <h2>Actualités récentes</h2>
-</div>
+    <h1>Bienvenue sur ServiceEPGT ! 🚀</h1>
+    <p>Ce site est entièrement dynamique grâce à Cloudflare Workers.</p>
+
+    <section id="a-propos">
+        <h2>À propos</h2>
+        <p id="a-propos-description">Chargement...</p>
+    </section>
+
+    <section id="avis-liste">
+        <h2>Avis des utilisateurs</h2>
+    </section>
+
+    <section id="actu-liste">
+        <h2>Actualités récentes</h2>
+    </section>
+
+    <section id="galerie">
+        <h2>Galerie d’images</h2>
+        <div id="images-container"></div>
+    </section>
+
+    <section id="articles-liste">
+        <h2>Articles</h2>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="confirmation-message" style="display: none; color: green;">Message envoyé !</p>
+    </section>
+
+    <script src="static/script.js"></script>
 </body>
 </html>

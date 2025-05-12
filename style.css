@@ -1,13 +1,111 @@
+/* 🌍 Réinitialisation des styles pour une meilleure cohérence */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-color: #f4f4f4;
-}
-
-h1 {
     color: #333;
+    text-align: center;
+    padding: 20px;
 }
 
-p {
-    color: #555;
+/* 🎨 Titres */
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* 🗂️ Conteneurs */
+#avis-liste, #actu-liste {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 📢 Avis & Actualités */
+#avis-liste div, #actu-liste div {
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+/* ✏️ Formulaire de contact */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* 🎭 Bouton */
+button {
+    background: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #avis-liste, #actu-liste {
+        max-width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
 }

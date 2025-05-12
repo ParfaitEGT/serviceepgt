@@ -1,0 +1,11 @@
+account_id = "c9b48fbf671f3e5c0be12b910c3e573a"
+project_name = "serviceepgt"
+workers_dev = true
+
+[site]
+bucket = "./"
+entry-point = "."
+
+[build]
+command = "npm run build"
+upload_format = "service"
